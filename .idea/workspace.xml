@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e91a714-3418-4395-822b-829cddd52a86" name="변경" comment="fix : fix pakage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sw_project/model/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sw_project/model/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sw_project/model/Like.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sw_project/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sw_project/service/BoardService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sw_project/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sw_project/service/LikeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sw_project/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/common/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/common/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fragment/footer.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fragment/header.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
+    <list default="true" id="3e91a714-3418-4395-822b-829cddd52a86" name="변경" comment="add : service and model logic">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/model/Board.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/model/Comment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/model/Like.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/model/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/service/BoardService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/service/CommentService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/service/LikeService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +65,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\project\sw_project\src\main\webapp\WEB-INF\classes\swr\model" />
+      <recent name="E:\project\sw_project\src\main\webapp\WEB-INF\classes\swr\service" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
@@ -78,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734146781493</updated>
-      <workItem from="1734146782542" duration="1525000" />
+      <workItem from="1734146782542" duration="2521000" />
     </task>
     <task id="LOCAL-00001" summary="fix : fix pakage">
       <option name="closed" value="true" />
@@ -88,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734146840610</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add : service and model logic">
+      <option name="closed" value="true" />
+      <created>1734148339447</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734148339447</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix : fix pakage" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix : fix pakage" />
+    <MESSAGE value="add : service and model logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : service and model logic" />
   </component>
 </project>
