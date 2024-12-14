@@ -1,4 +1,4 @@
-package swr;
+package sw_project.service;
 
 import java.sql.*;
 

@@ -1,4 +1,4 @@
-package swr;
+package sw_project.model;
 
 import java.sql.Connection;
 import javax.naming.Context;
