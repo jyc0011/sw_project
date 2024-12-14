@@ -2,7 +2,7 @@
 
 <%@ page import="sw_project.service.UserService" %>
 <%@ page import="sw_project.model.User" %>
-<%@ include file="/common/header.jsp" %>
+<%@ include file="/fragment/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,6 +42,6 @@
     아직 회원이 아니신가요? <a href="<%= request.getContextPath() %>/login/register.jsp">회원가입</a>
 </p>
 
-<%@ include file="/common/footer.jsp" %>
+<%@ include file="/fragment/footer.jsp" %>
 </body>
 </html>
