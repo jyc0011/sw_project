@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e91a714-3418-4395-822b-829cddd52a86" name="변경" comment="add : service and model logic">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/model/Board.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/model/Comment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/model/Like.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/service/BoardService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/service/CommentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/service/LikeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/swr/service/UserService.class" afterDir="false" />
+    <list default="true" id="3e91a714-3418-4395-822b-829cddd52a86" name="변경" comment="add : compile">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/board/edit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sw_project/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sw_project/model/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sw_project/model/ConnectionContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sw_project/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sw_project/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/like/like_btn.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/like/like_btn.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/reply/form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/reply/form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/reply/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/reply/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/board/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/board/write.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -33,10 +37,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2qBrMq8vc6dGedaOtP2RPbSlLy3" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -45,26 +49,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/project/sw_project/src/main/java/lombok.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "모듈",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/project/sw_project/src/main/java/lombok.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\project\sw_project\src\main\webapp\WEB-INF\classes\swr\model" />
@@ -80,6 +85,9 @@
       <option name="presentableId" value="Default" />
       <updated>1734146781493</updated>
       <workItem from="1734146782542" duration="2521000" />
+      <workItem from="1734152083799" duration="880000" />
+      <workItem from="1734164350393" duration="6000" />
+      <workItem from="1734168114556" duration="2967000" />
     </task>
     <task id="LOCAL-00001" summary="fix : fix pakage">
       <option name="closed" value="true" />
@@ -97,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734148339447</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add : compile">
+      <option name="closed" value="true" />
+      <created>1734152365074</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734152365074</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,8 +143,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="fix : fix pakage" />
     <MESSAGE value="add : service and model logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="add : service and model logic" />
+    <MESSAGE value="add : compile" />
+    <option name="LAST_COMMIT_MESSAGE" value="add : compile" />
   </component>
 </project>

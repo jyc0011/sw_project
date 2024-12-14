@@ -1,7 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
+<%@ page import="sw_project.service.BoardService" %>
+<%@ page import="sw_project.model.Board" %>
 <%@ include file="/fragment/header.jsp" %> <!-- 헤더 포함 -->
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>게시판</title>
@@ -41,11 +45,18 @@
             text-decoration: none;
             padding: 5px 10px;
             border: 1px solid #ddd;
+            color: #007bff;
         }
         .pagination a.active {
             background-color: #007bff;
             color: white;
             border: none;
+            border-radius: 3px;
+        }
+        .pagination span {
+            margin: 0 5px;
+            padding: 5px 10px;
+            color: #ccc;
         }
     </style>
 </head>
@@ -66,20 +77,41 @@
         </thead>
         <tbody>
         <%
-            // 예제 데이터
-            String[][] boardData = {
-                    {"1", "첫 번째 글", "홍길동", "2024-01-01", "15"},
-                    {"2", "두 번째 글", "김철수", "2024-01-02", "10"},
-                    {"3", "세 번째 글", "이영희", "2024-01-03", "7"}
-            };
-            for (int i = 0; i < boardData.length; i++) {
+            // 현재 페이지 번호 가져오기, 기본값은 1
+            String pageParam = request.getParameter("page");
+            int currentPage = 1;
+            if (pageParam != null && !pageParam.isEmpty()) {
+                try {
+                    currentPage = Integer.parseInt(pageParam);
+                } catch (NumberFormatException e) {
+                    currentPage = 1;
+                }
+            }
+            int pageSize = 10; // 한 페이지에 표시할 게시글 수
+
+            // BoardService 인스턴스 생성
+            BoardService boardService = new BoardService();
+            List<Board> boardList = boardService.getBoardList(currentPage, pageSize);
+            int totalBoardCount = boardService.getTotalBoardCount();
+            int totalPages = (int) Math.ceil((double) totalBoardCount / pageSize);
+
+            // 게시글이 존재하는지 확인
+            if (boardList != null && !boardList.isEmpty()) {
+                for (Board board : boardList) {
         %>
         <tr>
-            <td><%= boardData[i][0] %></td>
-            <td><a href="view.jsp?id=<%= boardData[i][0] %>"><%= boardData[i][1] %></a></td>
-            <td><%= boardData[i][2] %></td>
-            <td><%= boardData[i][3] %></td>
-            <td><%= boardData[i][4] %></td>
+            <td><%= board.getId() %></td>
+            <td><a href="view.jsp?id=<%= board.getId() %>"><%= board.getTitle() %></a></td>
+            <td><%= board.getUsername() %></td>
+            <td><%= board.getCreatedDate() %></td>
+            <td><%= board.getViewCount() %></td>
+        </tr>
+        <%
+            }
+        } else {
+        %>
+        <tr>
+            <td colspan="5">게시글이 존재하지 않습니다.</td>
         </tr>
         <%
             }
@@ -87,12 +119,36 @@
         </tbody>
     </table>
 
-    <!-- 페이지네이션 -->
+    <!-- 페이지네이션: << 1 >> 형태로 단순화 -->
     <div class="pagination">
-        <a href="?page=1" class="active">1</a>
-        <a href="?page=2">2</a>
-        <a href="?page=3">3</a>
-        <a href="?page=4">4</a>
+        <%
+            // 이전 페이지 링크
+            if (currentPage > 1) {
+        %>
+        <a href="list.jsp?page=<%= currentPage - 1 %>">&lt;&lt;</a>
+        <%
+        } else {
+        %>
+        <span>&lt;&lt;</span>
+        <%
+            }
+
+            // 현재 페이지 번호만 표시
+        %>
+        <a href="list.jsp?page=<%= currentPage %>" class="active"><%= currentPage %></a>
+        <%
+
+            // 다음 페이지 링크
+            if (currentPage < totalPages) {
+        %>
+        <a href="list.jsp?page=<%= currentPage + 1 %>">&gt;&gt;</a>
+        <%
+        } else {
+        %>
+        <span>&gt;&gt;</span>
+        <%
+            }
+        %>
     </div>
 
     <!-- 글쓰기 버튼 -->

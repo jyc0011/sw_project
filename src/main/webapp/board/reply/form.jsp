@@ -46,13 +46,43 @@
     </style>
 </head>
 <body>
-<!-- 댓글 작성 폼 -->
-<div id="replyForm" class="reply-form">
-    <form action="addReply.do" method="post">
-        <textarea name="content" placeholder="댓글을 입력하세요" required></textarea>
-        <input type="hidden" name="author" value="${user}">
-        <button type="submit">댓글 등록</button>
+<div class="form-container">
+    <h3>댓글 작성</h3>
+    <form action="addComment.do" method="post" name="commentForm" onsubmit="return validateCommentForm()">
+        <!-- 댓글 내용 입력 -->
+        <div class="form-group">
+            <textarea name="content" placeholder="댓글을 입력하세요" required></textarea>
+        </div>
+        <!-- 작성자 표시 (로그인 사용자) -->
+        <div class="form-group">
+            <label for="author">작성자</label>
+            <input type="text" id="author" name="author" value="<%= session.getAttribute("loginUser") != null ? ((sw_project.model.User) session.getAttribute("loginUser")).getUsername() : "익명" %>" readonly>
+        </div>
+        <!-- 게시글 ID (숨겨진 필드) -->
+        <input type="hidden" name="boardId" value="<%= board != null ? board.getId() : 0 %>">
+        <!-- 부모 댓글 ID (대댓글용, 기본값은 0) -->
+        <input type="hidden" name="pid" value="0">
+        <!-- 버튼 -->
+        <div class="form-buttons">
+            <button type="submit">댓글 등록</button>
+            <button type="button" class="cancel-button" onclick="window.location.href='view.jsp?id=<%= board != null ? board.getId() : 0 %>'">취소</button>
+        </div>
     </form>
 </div>
+
+<script>
+    function validateCommentForm() {
+        var form = document.commentForm;
+
+        // 댓글 내용 확인
+        if (form.content.value.trim() === "") {
+            alert("댓글 내용을 입력해주세요.");
+            form.content.focus();
+            return false;
+        }
+
+        return true;
+    }
+</script>
 </body>
 </html>

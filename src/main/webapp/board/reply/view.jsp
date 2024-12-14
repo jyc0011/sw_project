@@ -47,17 +47,25 @@
 </head>
 <body>
 <div class="reply-container">
-    <h1>댓글</h1>
-    <!-- 댓글 목록 -->
+    <h3>댓글 목록</h3>
     <div class="reply-list">
-        <c:forEach var="reply" items="${replyList}">
+        <c:forEach var="comment" items="${commentList}">
             <div class="reply-item">
-                <p><strong>${reply.author}</strong></p>
-                <p>${reply.content}</p>
-                <small>${reply.date}</small>
+                <p><strong>${comment.author}</strong></p>
+                <p>${comment.content}</p>
+                <small>${comment.createdDate}</small>
+                <br>
+                <!-- 댓글 삭제 버튼 (작성자만 삭제 가능) -->
+                <c:if test="${sessionScope.loginUser != null && sessionScope.loginUser.id == comment.userId}">
+                    <form action="deleteComment.do" method="post" onsubmit="return confirm('댓글을 삭제하시겠습니까?');">
+                        <input type="hidden" name="commentId" value="${comment.id}">
+                        <input type="hidden" name="boardId" value="${comment.boardId}">
+                        <button type="submit" class="delete-button">삭제</button>
+                    </form>
+                </c:if>
             </div>
         </c:forEach>
-        <c:if test="${empty replyList}">
+        <c:if test="${empty commentList}">
             <p>댓글이 없습니다.</p>
         </c:if>
     </div>
