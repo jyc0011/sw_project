@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="/common/header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>SW term project TEAM C : main</title>
 </head>
 <body>
-cha jeong eun
+<h1>
+    SW term project TEAM C
+</h1>
 </body>
+<%@ include file="/common/footer.jsp" %>
 </html>
